@@ -10,21 +10,16 @@
 // if greater than, repeat above on the right array instead of left
 
 const binarySearch = (array, target) => {
-  console.log('THIS IS CURRENT ARRAY: ', array);
-  console.log('THIS IS TARGET: ', target);
   if (array.length === 1) {
     if (array[0] === target) {
-      console.log(true);
       return true;
     } else {
-      console.log(false);
       return false;
     }
   }
 
   let halfLength = Math.floor(array.length / 2);
   if (array[halfLength] === target) {
-    console.log('halfindex: ', true);
     return true;
   } else {
     const left = array.slice(0, halfLength);

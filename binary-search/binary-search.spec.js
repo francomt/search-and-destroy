@@ -25,5 +25,11 @@ describe('Binary Search', () => {
     expect(binarySearch(test3, 4)).to.equal(false);
   });
 
+  it('returns', () => {
+    const mySpy = chai.spy(binarySearch);
+    expect(mySpy(test3, 4)).to.equal(false);
+    expect(mySpy).to.have.been.called.exactly(1);
+  });
+
   //(OPTIONAL) WRITE YOUR OWN TESTS HERE. Include >=1 edge case :)
 });

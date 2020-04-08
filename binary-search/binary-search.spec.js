@@ -27,8 +27,8 @@ describe('Binary Search', () => {
 
   it('returns', () => {
     const mySpy = chai.spy(binarySearch);
-    expect(mySpy(test3, 4)).to.equal(false);
-    expect(mySpy).to.have.been.called.exactly(1);
+    expect(mySpy(test3, 4, mySpy)).to.equal(false);
+    expect(mySpy).to.have.been.called.exactly(3);
   });
 
   //(OPTIONAL) WRITE YOUR OWN TESTS HERE. Include >=1 edge case :)

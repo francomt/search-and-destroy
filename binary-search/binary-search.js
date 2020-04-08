@@ -9,7 +9,8 @@
 // check array[halfIndex], if target is less than, go into recursive call on left arr
 // if greater than, repeat above on the right array instead of left
 
-const binarySearch = (array, target) => {
+const binarySearch = (array, target, myFunction = null) => {
+  if (myFunction === null) myFunction = binarySearch;
   if (array.length === 1) {
     if (array[0] === target) {
       return true;
@@ -26,9 +27,9 @@ const binarySearch = (array, target) => {
     const right = array.slice(halfLength);
 
     if (array[halfLength] < target) {
-      return binarySearch(right, target);
+      return myFunction(right, target, myFunction);
     } else {
-      return binarySearch(left, target);
+      return myFunction(left, target, myFunction);
     }
   }
 };

@@ -15,9 +15,9 @@ const test3 = [-0.5, 0.03, 2.6, 3, 3.5, 3.777777, 5];
 describe('Binary Search', () => {
   it('returns true if target value is in array', () => {
     expect(binarySearch(test1, 10)).to.equal(true);
-    // expect(binarySearch(test2, -3)).to.equal(true);
-    // expect(binarySearch(test2, 20)).to.equal(true);
-    // expect(binarySearch(test3, 2.6)).to.equal(true);
+    expect(binarySearch(test2, -3)).to.equal(true);
+    expect(binarySearch(test2, 20)).to.equal(true);
+    expect(binarySearch(test3, 2.6)).to.equal(true);
   });
 
   it('returns false if target value is not in array', () => {

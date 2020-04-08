@@ -14,6 +14,9 @@ test1.addToHead(0)
 numbers.forEach(val => test1.addToTail(val));
 test1.getNthNode(6).next = test1.getNthNode(3);
 
+console.log(Object.keys(test1))
+console.log(test1.tail)
+
 const test2 = new LinkedList();
 test2.addToHead('z');
 letters.forEach(letter => test2.addToTail(letter));
